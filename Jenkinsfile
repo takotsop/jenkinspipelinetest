@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
-mkdir tanner
+touch dockerfile
 
 testrpc &
 
