@@ -1,37 +1,30 @@
 pipeline {
   agent any
   stages {
-    stage('testrpc') {
+    stage('make working directory') {
       steps {
         sh '''#!/bin/bash
+mkdir tannertest
+cd tannertest
+truffle init
 
-testrpc &
-
-sleep 2s
-'''
+sleep 5s'''
       }
     }
-    stage('test') {
+    stage('') {
       steps {
-        sh '''#!/bin/bash
+        sh '''git commit -m "new files"
 
-truffle test'''
-      }
-    }
-    stage('git commit') {
-      steps {
-        sh '''#!/bin/bash
-
-git commit -m "upload files"
-
-sleep 10s'''
+sleep 5s'''
       }
     }
     stage('git add') {
       steps {
         sh '''#!/bin/bash
 
-git push origin master'''
+git push origin master
+
+sleep 10s'''
       }
     }
   }
