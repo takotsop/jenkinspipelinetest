@@ -7,6 +7,8 @@ pipeline {
 
 git checkout tanner
 
+
+touch tannertestjenkins
 '''
       }
     }
@@ -18,7 +20,7 @@ git add .
 
 sleep 5s
 
-git commit -a -m "testing"'''
+git commit -m "testing jenkins"'''
       }
     }
     stage('push') {
