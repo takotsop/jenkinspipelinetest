@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
-git checkout -b tanner
+git checkout tanner
 
 '''
       }
