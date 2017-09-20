@@ -11,7 +11,7 @@ truffle init
 sleep 5s'''
       }
     }
-    stage('') {
+    stage('error') {
       steps {
         sh '''git commit -m "new files"
 
