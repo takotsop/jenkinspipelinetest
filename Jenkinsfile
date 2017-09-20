@@ -8,8 +8,7 @@ pipeline {
 git checkout tanner
 
 
-touch tannertestjenkins2
-'''
+touch tanner2'''
       }
     }
     stage('add branch') {
