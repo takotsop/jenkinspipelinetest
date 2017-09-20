@@ -5,6 +5,8 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
+mkdir tanner
+
 testrpc &
 
 sleep 2s
