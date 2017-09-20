@@ -6,12 +6,15 @@ pipeline {
         sh '''#!/bin/bash
 mkdir tannertest
 cd tannertest
+
+git remote add origin git@github.com/takotsop/jenkinspipelinetest.git
+sleep 2s
 truffle init
 
 sleep 5s'''
       }
     }
-    stage('no') {
+    stage('commit') {
       steps {
         sh '''#!/bin/bash
 
