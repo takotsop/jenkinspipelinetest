@@ -3,22 +3,11 @@ pipeline {
   stages {
     stage('testrpc') {
       steps {
-        parallel(
-          "testrpc": {
-            sh '''#!/bin/bash
+        sh '''#!/bin/bash
 
 testrpc &
 
 sleep 2s'''
-            
-          },
-          "mkdir": {
-            sh '''#!/bin/bash
-
-mkdir tanner'''
-            
-          }
-        )
       }
     }
     stage('test') {
