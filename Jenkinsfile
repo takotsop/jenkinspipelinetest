@@ -5,6 +5,8 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
+rm truffle
+
 truffle init'''
       }
     }
