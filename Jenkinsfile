@@ -13,8 +13,8 @@ truffle init'''
         sh '''#!/bin/bash
 
 testrpc &
-'''
-        timeout(time: 2)
+
+sleep 2s'''
       }
     }
     stage('test') {
