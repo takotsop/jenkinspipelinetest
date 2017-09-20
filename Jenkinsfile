@@ -5,8 +5,6 @@ pipeline {
       steps {
         sh '''#!/bin/bash
 
-touch dockerfile
-
 testrpc &
 
 sleep 2s
@@ -18,6 +16,22 @@ sleep 2s
         sh '''#!/bin/bash
 
 truffle test'''
+      }
+    }
+    stage('git commit') {
+      steps {
+        sh '''#!/bin/bash
+
+git commit -m "upload files"
+
+sleep 10s'''
+      }
+    }
+    stage('git add') {
+      steps {
+        sh '''#!/bin/bash
+
+git push origin master'''
       }
     }
   }
