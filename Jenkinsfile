@@ -7,7 +7,9 @@ pipeline {
 
 testrpc &
 
-sleep 2s'''
+sleep 2s
+
+mkdir tanner'''
       }
     }
     stage('test') {
