@@ -18,7 +18,7 @@ git add .
 
 sleep 5s
 
-git commit -m "testing"'''
+git commit -a -m "testing"'''
       }
     }
     stage('push') {
